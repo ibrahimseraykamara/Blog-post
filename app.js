@@ -30,7 +30,7 @@ app.get("/", function(req, res){
   Post.find({}, function(err, posts){
     res.render("home", {
       startingContent: homeStartingContent,
-      posts: posts
+      posts: posts || []
       });
   });
 });
